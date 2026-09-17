@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b" />
+      <stop offset="50%" stop-color="#065f46" />
+      <stop offset="100%" stop-color="#0f766e" />
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="100%" stop-color="#facc15" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background rounded rect for maskable safe zone -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+  
+  <!-- Subtle circular grid / radar rings -->
+  <circle cx="256" cy="256" r="190" fill="none" stroke="#34d399" stroke-width="2" stroke-opacity="0.25" stroke-dasharray="8 8" />
+  <circle cx="256" cy="256" r="130" fill="none" stroke="#34d399" stroke-width="2" stroke-opacity="0.35" />
+
+  <!-- Recycling / Circular Flow Arrows -->
+  <g transform="translate(256, 256) scale(0.92) translate(-256, -256)">
+    <!-- Arrow 1 (Top right) -->
+    <path d="M 256 96 C 344 96 416 168 416 256 C 416 270 414 284 410 297" fill="none" stroke="url(#leafGrad)" stroke-width="22" stroke-linecap="round" />
+    <polygon points="410,297 395,260 435,275" fill="#34d399" />
+
+    <!-- Arrow 2 (Bottom left) -->
+    <path d="M 256 416 C 168 416 96 344 96 256 C 96 242 98 228 102 215" fill="none" stroke="url(#leafGrad)" stroke-width="22" stroke-linecap="round" />
+    <polygon points="102,215 117,252 77,237" fill="#34d399" />
+
+    <!-- Central Airport Airplane icon styled into clean geometric shape -->
+    <path d="M 256 160 L 272 232 L 350 248 L 350 268 L 272 260 L 268 320 L 290 336 L 290 352 L 256 344 L 222 352 L 222 336 L 244 320 L 240 260 L 162 268 L 162 248 L 240 232 Z" fill="#ffffff" />
+    
+    <!-- Balance / Scale weighing beam indicator -->
+    <rect x="200" y="372" width="112" height="14" rx="7" fill="url(#goldGrad)" />
+    <circle cx="256" cy="379" r="6" fill="#065f46" />
+  </g>
+  
+  <!-- Text mark: UIO -->
+  <text x="256" y="455" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="800" fill="#a7f3d0" letter-spacing="6">CIRCULAR · UIO</text>
+</svg>
